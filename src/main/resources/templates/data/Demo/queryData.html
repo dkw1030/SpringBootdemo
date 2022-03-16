@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<div th:replace="~{common/commonTest::test}"></div>
+<div th:replace="~{common/DemoCommon::test}"></div>
 <table>
     <thead>
     <tr>
@@ -16,7 +16,9 @@
     </thead>
     <tbody>
     <tr th:each="index:${data}">
-        <td th:text="${index.idtest}"></td>
+        <td>
+            <a th:href="@{/test6/}+${index.getIdtest}" th:text="${index.idtest}"></a>
+        </td>
     </tr>
     </tbody>
 </table>
